@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 5% 25%;
+    background-color: antiquewhite;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+h1 {
+    font-size: 4em;
+}
+.line {
+    height: 2px;
+    width: 100%;
+    background-color: saddlebrown;
+}
