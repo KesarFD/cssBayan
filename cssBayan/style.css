@@ -18,8 +18,50 @@ html {
 h1 {
     font-size: 4em;
 }
+h3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
 .line {
-    height: 2px;
+    height: 0.1vh;
     width: 100%;
     background-color: saddlebrown;
+    margin-bottom: 1vh;
+}
+.list {
+    list-style: none;
+    color: brown;
+}
+.list:hover {
+    color: black;
+    cursor: pointer;
+}
+.list-item {
+    font-size: 2em;
+    width: 100%;
+    transition: 0.3s;
+}
+.item-container {
+    height: 7vh;
+    transition: 0.5s;
+
+}
+.item-container:hover {
+    height: 50vh;
+}
+.item-container:hover .meme {
+    display: block;
+}
+h3::after {
+    content: url('assets/png/plus.png');
+}
+.meme {
+    display: none;
+    width: 60%;
+    height: 70%;
+    margin: 3% 0;
+    background-color: saddlebrown;
+    transition: 0.5s;
+    margin-left: 15%;
 }
