@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+body {
+    padding: 5% 25%;
+    background-color: antiquewhite;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+.container {
+    margin: 0 auto;
+    width: 100%;
+}
+h1 {
+    font-size: 4em;
+}
+h3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.line {
+    height: 0.1vh;
+    width: 100%;
+    background-color: saddlebrown;
+    margin-bottom: 1vh;
+    transition: 0.5s;
+}
+.list {
+    list-style: none;
+    color: brown;
+    cursor: pointer;
+}
+.list:hover {
+    color: black;
+}
+.list-item {
+    font-size: 2em;
+    width: 100%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.item-container {
+    height: 7vh;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.item-container:hover {
+    height: 50vh;
+    cursor: pointer;
+}
+.item-container:hover .meme {
+    display: block;
+}
+.item-container:hover h3::after {
+    content: url('assets/png/cross.png');
+}
+h3::after {
+    content: url('assets/png/plus.png');
+    transition: 1s;
+}
+.meme {
+    display: none;
+    width: 60%;
+    height: 70%;
+    margin: 3% 0;
+    background-color: saddlebrown;
+    transition: 1s;
+    margin-left: 15%;
+    cursor: pointer;
+}
+#input1 {
+    display: none;
+  }
+  #input2 {
+    display: none;
+  }
+  #input3 {
+    display: none;
+  }
+  #input4 {
+    display: none;
+  }
+  #input5 {
+    display: none;
+  }
+input:checked + .item-container {
+    height: 50vh;
+}
+input:checked + .item-container h3 {
+    color: seagreen;
+}
+input:checked + .item-container .meme {
+    display: block;
+}
+input:checked + .item-container h3::after {
+    content: url('assets/png/cross.png');
+}
+@media only screen and (max-width: 660px) {
+    h1 {
+        font-size: 3em;
+    }
+    .list {
+        color: black;
+        font-size: 0.7em;
+    }
+    body {
+        padding: 5% 20%;
+        background-color: antiquewhite;
+    }
+    .line {
+        margin-bottom: 0.5vh;
+    }
+    .item-container {
+        height: 5vh;
+    }
+    .item-container:hover {
+        height: 30vh;
+    }
+    input:checked + .item-container {
+        height: 30vh;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 2em;
+    }
+    .list {
+        color: black;
+        font-size: 0.5em;
+    }
+    body {
+        padding: 5% 15%;
+        background-color: antiquewhite;
+    }
+    .line {
+        margin-bottom: 0.5vh;
+    }
+    .item-container {
+        height: 5vh;
+    }
+    .item-container:hover {
+        height: 30vh;
+    }
+    input:checked + .item-container {
+        height: 30vh;
+    }
+}
