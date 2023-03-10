@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    width: 0;
+}
 body {
     padding: 5% 25%;
     background-color: antiquewhite;
@@ -22,6 +25,8 @@ h3 {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    transition: 0.5;
+    cursor: pointer;
 }
 .line {
     height: 0.1vh;
@@ -32,10 +37,10 @@ h3 {
 .list {
     list-style: none;
     color: brown;
+    cursor: pointer;
 }
 .list:hover {
     color: black;
-    cursor: pointer;
 }
 .list-item {
     font-size: 2em;
@@ -45,7 +50,7 @@ h3 {
 .item-container {
     height: 7vh;
     transition: 0.5s;
-
+    cursor: pointer;
 }
 .item-container:hover {
     height: 50vh;
@@ -53,8 +58,21 @@ h3 {
 .item-container:hover .meme {
     display: block;
 }
+.item-container:hover h3::after {
+    content: url('assets/png/cross.png');
+}
+.item-container:checked {
+    height: 50vh;
+}
+.item-container:checked .meme {
+    display: block;
+}
+.item-container:checked h3::after {
+    content: url('assets/png/cross.png');
+}
 h3::after {
     content: url('assets/png/plus.png');
+    transition: 0.5s;
 }
 .meme {
     display: none;
@@ -64,4 +82,32 @@ h3::after {
     background-color: saddlebrown;
     transition: 0.5s;
     margin-left: 15%;
+    cursor: pointer;
+}
+#input1 {
+    display: none;
+  }
+  #input2 {
+    display: none;
+  }
+  #input3 {
+    display: none;
+  }
+  #input4 {
+    display: none;
+  }
+  #input5 {
+    display: none;
+  }
+input:checked + .item-container {
+    height: 50vh;
+}
+input:checked + .item-container h3 {
+    color: goldenrod;
+}
+input:checked + .item-container .meme {
+    display: block;
+}
+input:checked + .item-container h3::after {
+    content: url('assets/png/cross.png');
 }
