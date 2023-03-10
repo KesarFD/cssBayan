@@ -97,7 +97,7 @@ input:checked + .item-container {
     height: 50vh;
 }
 input:checked + .item-container h3 {
-    color: goldenrod;
+    color: seagreen;
 }
 input:checked + .item-container .meme {
     display: block;
